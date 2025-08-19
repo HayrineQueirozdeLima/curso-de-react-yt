@@ -1,0 +1,33 @@
+import { useState } from "react"; // Importando o hook useState do React para gerenciar o estado do componente
+
+function App() {
+  // Componente funcional App
+  // Declarando uma variável de estado chamada 'message' e uma função para atualizá-la
+  // A variável 'message' inicia com o valor "Hello, World!"
+  // A função 'setMessage' é usada para atualizar o valor de 'message'
+  // O valor inicial do estado é passado como argumento para useState
+  // useState retorna um array com dois elementos: o estado atual e a função para atualizá-lo
+  // Neste caso, 'message' é o estado e 'setMessage' é a função para atualizá-lo
+  const [message, setMessage] = useState("Hello, World!");
+
+  // State (Estado) = É UMA VARIÁVEL QUE, QUANDO ALTERADA, FAZ COM QUE A INTERFACE SEJA ATUALIZADA,
+  // É ÚTIL QUANDO SE QUER MANTER DADOS QUE PODEM MUDAR AO LONGO DO TEMPO OU DE ACORDO COM A INTERAÇÃO DO USUÁRIO
+
+  // useState = É UM HOOK QUE PERMITE CRIAR E MANIPULAR ESTADOS EM COMPONENTES FUNCIONAIS
+
+  return (
+    <div>
+      <h1>{message}</h1>
+
+      <button
+        onClick={() => {
+          setMessage("Hello, I was clicked!");
+        }}
+      >
+        Mudar mensagem
+      </button>
+    </div>
+  );
+}
+
+export default App;
